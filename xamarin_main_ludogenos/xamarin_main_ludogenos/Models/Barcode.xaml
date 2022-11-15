@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="xamarin_main_ludogenos.Models.Barcode"
+             xmlns:zxing="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms"
+             xmlns:zxingcommon="clr-namespace:ZXing.Common;assembly=zxing.portable">
+    <ContentPage.Content>
+        <StackLayout>
+         
+
+            <Entry 
+            Placeholder="BarCode"
+            Keyboard="Numeric"
+            x:Name="etValor"/>
+            <Picker
+            x:Name="picker"
+            Title="Modelos de BarCode"
+            >   
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>EAN_13</x:String>
+                        <x:String>EAN_8</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+
+            <zxing:ZXingBarcodeImageView 
+            x:Name="idBarCode"
+            BarcodeValue="1234567"
+            BarcodeFormat="EAN_8"
+            WidthRequest="150" 
+            HeightRequest="250"
+            >
+
+                <zxing:ZXingBarcodeImageView.BarcodeOptions>
+                    <zxingcommon:EncodingOptions
+                    Height="150" 
+                    Width="250" />
+                </zxing:ZXingBarcodeImageView.BarcodeOptions>
+            </zxing:ZXingBarcodeImageView>
+
+
+            <Button Text="Gerar"
+        x:Name="btGerar"/>
+
+
+
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
