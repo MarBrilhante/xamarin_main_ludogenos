@@ -8,7 +8,7 @@
         <StackLayout>
             
             <Entry 
-            Placeholder="BarCode"
+            Placeholder="QRCode"
             x:Name="etValor"/>
 
             <zxing:ZXingBarcodeImageView 
