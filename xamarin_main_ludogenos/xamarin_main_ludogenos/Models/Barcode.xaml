@@ -3,18 +3,23 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="xamarin_main_ludogenos.Models.Barcode"
              xmlns:zxing="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms"
-             xmlns:zxingcommon="clr-namespace:ZXing.Common;assembly=zxing.portable">
+             xmlns:zxingcommon="clr-namespace:ZXing.Common;assembly=zxing.portable"
+             Title="BarCode">
     <ContentPage.Content>
         <StackLayout>
          
 
             <Entry 
-            Placeholder="BarCode"
+                Margin="20"
+                BackgroundColor="Azure"
+            Placeholder="Enter the BarCode"
             Keyboard="Numeric"
             x:Name="etValor"/>
             <Picker
+                Margin="20"
+                BackgroundColor="Azure"
             x:Name="picker"
-            Title="Modelos de BarCode"
+            Title="Barcode templates available"
             >   
                 <Picker.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
@@ -40,9 +45,14 @@
                 </zxing:ZXingBarcodeImageView.BarcodeOptions>
             </zxing:ZXingBarcodeImageView>
 
+            <Label Text="Click to generate BarCode" FontSize="20" TextColor="black" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold"></Label>
 
-            <Button Text="Gerar"
-        x:Name="btGerar"/>
+
+            <Button Text="Generate"
+                    TextColor="White"
+                     BackgroundColor="Blue"  VerticalOptions="CenterAndExpand"
+                     HorizontalOptions="CenterAndExpand"
+             x:Name="btGerar"/>
 
 
 

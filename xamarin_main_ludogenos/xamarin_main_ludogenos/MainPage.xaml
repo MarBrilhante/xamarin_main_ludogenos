@@ -4,6 +4,11 @@
              x:Class="xamarin_main_ludogenos.MainPage"
              BackgroundColor="Black">
 
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="setting.png"
+                     Clicked="SettingsButton" />
+    </ContentPage.ToolbarItems>
+
     <StackLayout>
         <Frame BackgroundColor="#2196F3" Padding="10" CornerRadius="0">
             <Label Text="App" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>

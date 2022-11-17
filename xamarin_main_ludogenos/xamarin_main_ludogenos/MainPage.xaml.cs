@@ -35,5 +35,10 @@ namespace xamarin_main_ludogenos
         {
             Navigation.PushAsync(new Models.Text());
         }
+
+        private void SettingsButton(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new Models.Settings());
+        }
     }
 }

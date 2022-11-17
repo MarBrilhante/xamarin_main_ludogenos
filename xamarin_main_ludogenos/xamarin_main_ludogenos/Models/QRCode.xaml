@@ -3,13 +3,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="xamarin_main_ludogenos.Models.QRCode"
              xmlns:zxing="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms"
-             xmlns:zxingcommon="clr-namespace:ZXing.Common;assembly=zxing.portable">
+             xmlns:zxingcommon="clr-namespace:ZXing.Common;assembly=zxing.portable"
+             Title="QrCode">
     <ContentPage.Content>
         <StackLayout>
             
             <Entry 
-            Placeholder="QRCode"
+                Margin="20"
+                BackgroundColor="Azure"
+            Placeholder="Enter your QrCode here"
             x:Name="etValor"/>
+
+            <Label Text="Or point the camera" FontSize="18" TextColor="Black" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold"></Label>
 
             <zxing:ZXingBarcodeImageView 
             x:Name="idQRCode"
@@ -26,8 +31,13 @@
                 </zxing:ZXingBarcodeImageView.BarcodeOptions>
             </zxing:ZXingBarcodeImageView>
 
+            <Label Text="Click to generate QRCode" FontSize="20" TextColor="black" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold"></Label>
 
-            <Button Text="Gerar"
+            <Button Text="Generate"
+                    TextColor="White"
+                     BackgroundColor="Blue"  VerticalOptions="CenterAndExpand"
+                     HorizontalOptions="CenterAndExpand"
+                   
                     x:Name="btGerar"/>
 
 
