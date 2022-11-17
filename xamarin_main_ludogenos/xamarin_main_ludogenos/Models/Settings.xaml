@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="xamarin_main_ludogenos.Models.Settings"
-             Title="Configuração">
+             Title="Settings">
     <ContentPage.Content>
 
 
@@ -16,10 +16,10 @@
 
             </FlexLayout.GestureRecognizers>
 
-            <Label Text="Método de conexão" FontSize="Medium" TextColor="Black"  Margin="20" ></Label>
+            <Label Text="Connection Method" FontSize="Medium" TextColor="Black"  Margin="20" ></Label>
 
             <StackLayout Orientation="Vertical" Padding="5">
-                <Label x:Name="MétodoText" TextColor="Gray" FontSize="15"></Label>
+                <Label x:Name="MétodoText" TextColor="Black" FontSize="15"></Label>
 
                 <Image Source="arrow5.png" Rotation="180" WidthRequest="30" ></Image>
 

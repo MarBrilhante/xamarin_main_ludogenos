@@ -30,7 +30,7 @@ namespace xamarin_main_ludogenos.Models
         {
 
 
-            string option = await DisplayActionSheet("Método de conexão", "cancelar", null, "API");
+            string option = await DisplayActionSheet("Connection Method", "cancelar", null, "API");
             if (option != "cancelar" && option != null)
             {
                 MétodoOption = option;

@@ -4,12 +4,12 @@
              x:Class="xamarin_main_ludogenos.Models.Text"
              Title="Text printing">
     <ContentPage.Content>
-        <StackLayout Orientation="Vertical" BackgroundColor="black">
+        <StackLayout Orientation="Vertical" BackgroundColor="White">
             <FlexLayout JustifyContent="SpaceBetween" Padding="15, 0 , 10, 5">
-                <Label Text="Text Typeface" TextColor="White" FontSize="20"></Label>
+                <Label Text="Text Typeface" TextColor="Black"  FontSize="20"></Label>
 
                 <StackLayout Orientation="Horizontal" Padding="4">
-                    <Label Text="Type Monospace" TextColor="Gray" FontSize="15"></Label>
+                    <Label Text="Type Monospace" TextColor="Black" FontSize="15"></Label>
                 </StackLayout>
             </FlexLayout>
 
@@ -23,29 +23,29 @@
 
                 </FlexLayout.GestureRecognizers>
 
-                <Label Text="char set" FontSize="20" TextColor="White" ></Label>
+                <Label Text="char set" FontSize="20" TextColor="Black" ></Label>
 
                 <StackLayout Orientation="Horizontal" Padding="5">
-                    <Label x:Name="CharSetText" TextColor="Gray" FontSize="15"></Label>
+                    <Label x:Name="CharSetText" TextColor="Black" FontSize="15"></Label>
 
-                    <Image Source="arrow5.png" Rotation="180" WidthRequest="30" BackgroundColor="black"></Image>
+                    <Image Source="arrow5.png" Rotation="180" WidthRequest="30" ></Image>
 
                 </StackLayout>
             </FlexLayout>
 
 
             <!--Aqui está o Tamanho do texto-->
-            <StackLayout Padding="10, 0, 10, 5">
+            <StackLayout Padding="10, 0, 10, 5"> 
                 <FlexLayout JustifyContent="SpaceBetween">
-                    <Label Text="Text Size" TextColor="White" FontSize="18"></Label>
+                    <Label Text="Text Size" TextColor="black" FontSize="18"></Label>
 
-                    <Label x:Name="TextSizeLabel" TextColor="Gray"></Label>
+                    <Label x:Name="TextSizeLabel" TextColor="Black"></Label>
 
 
 
                 </FlexLayout>
 
-                <Slider  x:Name="Slider" Maximum="36" Minimum="12" Value="24" ValueChanged="SliderChanged">
+                <Slider  x:Name="Slider" Maximum="36" Minimum="12" Value="24" ValueChanged="SliderChanged" BackgroundColor="LightGray">
 
 
 
@@ -56,16 +56,16 @@
 
             <!--AQUI ESTÁ A ESCOLHA DO TEXTO SUBLINHADO -->
             <StackLayout Padding="10, 0, 10, 5">
-                <FlexLayout BackgroundColor="#464748" JustifyContent="Center" Padding="10">
+                <FlexLayout BackgroundColor="LightGray" JustifyContent="Center" Padding="10">
 
-                    <Label Text="bold" TextColor="White" FontAttributes="Bold" FontSize="15" ></Label>
+                    <Label Text="bold" TextColor="Black" FontAttributes="Bold" FontSize="15" ></Label>
 
-                    <CheckBox Color="White" IsChecked="False" CheckedChanged="BoldChanged"></CheckBox>
+                    <CheckBox Color="Black" IsChecked="False" CheckedChanged="BoldChanged"></CheckBox>
 
 
-                    <Label Text="underline" TextColor="White" FontAttributes="Bold" FontSize="15"></Label>
+                    <Label Text="underline" TextColor="Black" FontAttributes="Bold" FontSize="15"></Label>
 
-                    <CheckBox Color="White" IsChecked="False" CheckedChanged="UnderlineChanged" ></CheckBox>
+                    <CheckBox Color="Black" IsChecked="False" CheckedChanged="UnderlineChanged" ></CheckBox>
 
 
                 </FlexLayout>
@@ -80,7 +80,7 @@
 
             <Label Text="Click to print text" FontSize="20" TextColor="White" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold"></Label>
 
-            <Button Text="Print Out" TextColor="White" BackgroundColor="Blue"  VerticalOptions="CenterAndExpand"
+            <Button Text="Print Out" TextColor="White" BackgroundColor="blue"  VerticalOptions="CenterAndExpand"
                 HorizontalOptions="CenterAndExpand"
                 Command="{Binding ImprimirCommand}"></Button>
         </StackLayout>
