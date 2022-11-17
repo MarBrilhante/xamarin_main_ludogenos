@@ -11,7 +11,7 @@
 
     <StackLayout>
         <Frame BackgroundColor="Black" Padding="10" CornerRadius="0">
-            <Label Text="App Ludogenos" HorizontalTextAlignment="Center" TextColor="White" FontSize="26" FontAttributes="Bold"/>
+            <Label Text="App Ludogenos" HorizontalTextAlignment="Center" TextColor="White" FontSize="27" FontAttributes="Bold"/>
         </Frame>
 
 
