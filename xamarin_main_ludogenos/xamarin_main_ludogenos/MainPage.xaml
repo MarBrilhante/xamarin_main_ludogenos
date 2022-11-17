@@ -2,16 +2,19 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="xamarin_main_ludogenos.MainPage"
-             BackgroundColor="Black">
-
+             BackgroundColor="LightGray"
+              Title="TECTOY">
     <ContentPage.ToolbarItems>
+        
         <ToolbarItem IconImageSource="setting.png"
                      Clicked="SettingsButton" />
+
+
     </ContentPage.ToolbarItems>
 
     <StackLayout>
-        <Frame BackgroundColor="Black" Padding="10" CornerRadius="0">
-            <Label Text="App Xamarin Ludogenos" HorizontalTextAlignment="Center" TextColor="White" FontSize="26" FontAttributes="Bold"/>
+        <Frame BackgroundColor="LightGray" Padding="10" CornerRadius="0">
+            <Label Text="App Xamarin Ludogenos" HorizontalTextAlignment="Center" TextColor="black" FontSize="26" FontAttributes="Bold"/>
         </Frame>
 
 
@@ -28,11 +31,11 @@
 
 
 
-            <ImageButton Clicked="ImageButtonTest_ClickedAsync" Source="function_all.png" Grid.Row="0" Grid.Column="0" />
-            <ImageButton Clicked="ImageButtonQR_ClickedAsync" Source="function_qr.png" Grid.Row="0" Grid.Column="1"/>
-            <ImageButton Clicked="ImageButtonBarcode_ClickedAsync" Source="function_barcode.png" Grid.Row="1" Grid.Column="0"/>
-            <ImageButton Clicked="ImageButtonTxt_ClickedAsync" Source="function_text.png" Grid.Row="1" Grid.Column="1"/>
-            
+            <ImageButton Clicked="ImageButtonTest_ClickedAsync" Source="com.png" Grid.Row="0" Grid.Column="0" BackgroundColor="White" />
+            <ImageButton Clicked="ImageButtonQR_ClickedAsync" Source="QR.png" Grid.Row="0" Grid.Column="1" BackgroundColor="White"/>
+            <ImageButton Clicked="ImageButtonBarcode_ClickedAsync" Source="bar.png" Grid.Row="1" Grid.Column="0" BackgroundColor="White"/>
+            <ImageButton Clicked="ImageButtonTxt_ClickedAsync" Source="text.png" Grid.Row="1" Grid.Column="1" BackgroundColor="White"/>
+
 
         </Grid>
     </StackLayout>

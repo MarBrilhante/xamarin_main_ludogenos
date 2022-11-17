@@ -4,10 +4,32 @@
              x:Class="xamarin_main_ludogenos.Models.Settings"
              Title="Configuração">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+
+
+
+        <!--Aqui está o método -->
+        <FlexLayout 
+                JustifyContent="SpaceBetween" Padding="15, 0 ,10, 5">
+            <FlexLayout.GestureRecognizers>
+
+                <TapGestureRecognizer Tapped="OnClickMétodo"></TapGestureRecognizer>
+
+            </FlexLayout.GestureRecognizers>
+
+            <Label Text="Método de conexão" FontSize="Medium" TextColor="Black"  Margin="20" ></Label>
+
+            <StackLayout Orientation="Vertical" Padding="5">
+                <Label x:Name="MétodoText" TextColor="Gray" FontSize="15"></Label>
+
+                <Image Source="arrow5.png" Rotation="180" WidthRequest="30" ></Image>
+
+
+
+            </StackLayout>
+        </FlexLayout>
+
+
+
+
     </ContentPage.Content>
 </ContentPage>
