@@ -10,8 +10,8 @@
     </ContentPage.ToolbarItems>
 
     <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="10" CornerRadius="0">
-            <Label Text="App" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        <Frame BackgroundColor="Black" Padding="10" CornerRadius="0">
+            <Label Text="App Ludogenos" HorizontalTextAlignment="Center" TextColor="White" FontSize="27" FontAttributes="Bold"/>
         </Frame>
 
 
@@ -26,7 +26,8 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-
+            
+          
 
             <ImageButton Clicked="ImageButtonTest_ClickedAsync" Source="function_all.png" Grid.Row="0" Grid.Column="0" />
             <ImageButton Clicked="ImageButtonQR_ClickedAsync" Source="function_qr.png" Grid.Row="0" Grid.Column="1"/>
