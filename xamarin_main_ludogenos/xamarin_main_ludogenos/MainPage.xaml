@@ -10,8 +10,8 @@
     </ContentPage.ToolbarItems>
 
     <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="10" CornerRadius="0">
-            <Label Text="App" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        <Frame BackgroundColor="Black" Padding="10" CornerRadius="0">
+            <Label Text="App Xamarin Ludogenos" HorizontalTextAlignment="Center" TextColor="White" FontSize="26" FontAttributes="Bold"/>
         </Frame>
 
 
