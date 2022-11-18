@@ -78,7 +78,7 @@
                 <Editor x:Name="Editor" TextColor="Black" BackgroundColor="White" IsSpellCheckEnabled="True" IsTextPredictionEnabled="True" HeightRequest="250"></Editor>
             </StackLayout>
 
-            <Label Text="Click to print text" FontSize="20" TextColor="White" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold"></Label>
+            <Label Text="Click to print text" FontSize="20" TextColor="Black" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold"></Label>
 
             <Button Text="Print Out" TextColor="White" BackgroundColor="blue"  VerticalOptions="CenterAndExpand"
                 HorizontalOptions="CenterAndExpand"
