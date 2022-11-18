@@ -8,7 +8,7 @@
     <ContentPage.Content>
         <StackLayout>
 
-            <StackLayout Margin="20, 20, 0, 20" Orientation="Horizontal" HorizontalOptions="FillAndExpand" Spacing="20">
+            <StackLayout Margin="20, 20, 20, 20" Orientation="Horizontal" HorizontalOptions="FillAndExpand" Spacing="20">
                 <Entry x:Name="printerNameEntry" HorizontalOptions="Start" IsReadOnly="True" Placeholder="Please select printer:">
                 </Entry>
                 <Button x:Name="selectButton" Text="Select" Clicked="selectPrinterButton_Clicked" VerticalOptions="Center" BackgroundColor="#ff007acc" TextColor="White"></Button>

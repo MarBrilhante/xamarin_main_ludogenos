@@ -10,7 +10,7 @@
             
         
         <StackLayout Orientation="Vertical" BackgroundColor="White">
-                <StackLayout Margin="0, 0, 0, 0" Orientation="Horizontal" HorizontalOptions="FillAndExpand" Spacing="5">
+                <StackLayout Margin="20, 20, 20, 20" Orientation="Horizontal" HorizontalOptions="FillAndExpand" Spacing="5">
                     <Entry x:Name="printerNameEntry" HorizontalOptions="Start" IsReadOnly="True" Placeholder="Please select printer:">
                     </Entry>
                     <Button x:Name="selectButton" Text="Select" Clicked="selectPrinterButton_Clicked" VerticalOptions="Center" BackgroundColor="#ff007acc" TextColor="White"></Button>

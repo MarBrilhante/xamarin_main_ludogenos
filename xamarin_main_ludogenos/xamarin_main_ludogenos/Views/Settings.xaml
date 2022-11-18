@@ -19,11 +19,12 @@
             <Label Text="Connection Method" FontSize="Medium" TextColor="Black"  Margin="20" ></Label>
 
             <StackLayout Orientation="Vertical" Padding="5">
-                
-                <Image Source="arrow5.png" Rotation="180" WidthRequest="30"></Image>
+                <Image Source="arrow5.png" Rotation="-90" WidthRequest="30"></Image>
+
                 <Label x:Name="MétodoText" TextColor="Black" FontSize="15"></Label>
 
                
+
 
 
             </StackLayout>
