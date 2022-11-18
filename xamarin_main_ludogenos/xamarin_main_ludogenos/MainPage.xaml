@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="xamarin_main_ludogenos.MainPage"
              BackgroundColor="LightGray"
-              Title="TECTOY">
+              Title="App Xamarin Ludogenos">
     <ContentPage.ToolbarItems>
         
         <ToolbarItem IconImageSource="setting.png"
@@ -14,7 +14,8 @@
 
     <StackLayout>
         <Frame BackgroundColor="LightGray" Padding="10" CornerRadius="0">
-            <Label Text="App Xamarin Ludogenos" HorizontalTextAlignment="Center" TextColor="black" FontSize="26" FontAttributes="Bold"/>
+            <Label Text="By Tectoy" HorizontalTextAlignment="Center" TextColor="black" FontSize="20" FontAttributes="Bold"/>
+           
         </Frame>
 
 

@@ -2,14 +2,23 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="xamarin_main_ludogenos.Models.Text"
-             Title="Text printing">
+             Title="Text Printing">
     <ContentPage.Content>
 
         <ScrollView>
         
+            
         
         <StackLayout Orientation="Vertical" BackgroundColor="White">
-            <FlexLayout JustifyContent="SpaceBetween" Padding="15, 0 , 10, 5">
+                <StackLayout Margin="20, 20, 20, 20" Orientation="Horizontal" HorizontalOptions="FillAndExpand" Spacing="20">
+                    <Entry x:Name="printerNameEntry" HorizontalOptions="Start" IsReadOnly="True" Placeholder="Please select printer:">
+                    </Entry>
+                    <Button x:Name="selectButton" Text="Select" Clicked="selectPrinterButton_Clicked" VerticalOptions="Center" BackgroundColor="#ff007acc" TextColor="White"></Button>
+                </StackLayout>
+
+            
+            
+                <FlexLayout JustifyContent="SpaceBetween" Padding="15, 0 , 10, 5">
                 <Label Text="Text Typeface" TextColor="Black"  FontSize="20"></Label>
 
                 <StackLayout Orientation="Horizontal" Padding="4">
@@ -18,11 +27,7 @@
             </FlexLayout>
 
 
-            <StackLayout Margin="0, 0, 0, 50" Orientation="Horizontal" HorizontalOptions="FillAndExpand" Spacing="20">
-                <Entry x:Name="printerNameEntry" HorizontalOptions="Start" IsReadOnly="True" Placeholder="Please select printer.">
-                </Entry>
-                <Button x:Name="selectButton" Text="Select" Clicked="selectPrinterButton_Clicked" VerticalOptions="Center"></Button>
-            </StackLayout>
+           
 
 
             <!--Aqui está o char set -->
@@ -89,9 +94,9 @@
                 <Editor x:Name="Editor_text" TextColor="Black" BackgroundColor="White" IsSpellCheckEnabled="True" IsTextPredictionEnabled="True" HeightRequest="250"></Editor>
             </StackLayout>
 
-            <Label Text="Click to print text" FontSize="20" TextColor="Black" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold"></Label>
+            <Label Text="Click To Print Text" FontSize="20" TextColor="Black" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold"></Label>
 
-            <Button Clicked="Bt_imprimir_Clicked" x:Name="bt_imprimir" Text="Print Out" TextColor="White" BackgroundColor="blue"  VerticalOptions="CenterAndExpand"
+                <Button Clicked="Bt_imprimir_Clicked" x:Name="bt_imprimir" Text="Print Out" TextColor="White" BackgroundColor="#ff007acc"  VerticalOptions="CenterAndExpand"
                 HorizontalOptions="CenterAndExpand"
                 Command="{Binding ImprimirCommand}"></Button>
         </StackLayout>

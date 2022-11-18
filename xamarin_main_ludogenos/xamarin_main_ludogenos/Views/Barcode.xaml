@@ -10,13 +10,14 @@
          
 
             <Entry 
-                Margin="20"
+                
+                Margin="40"
                 BackgroundColor="Azure"
             Placeholder="Enter the BarCode"
             Keyboard="Numeric"
             x:Name="etValor"/>
             <Picker
-                Margin="20"
+                Margin="40"
                 BackgroundColor="Azure"
             x:Name="picker"
             Title="Barcode templates available"
@@ -45,12 +46,12 @@
                 </zxing:ZXingBarcodeImageView.BarcodeOptions>
             </zxing:ZXingBarcodeImageView>
 
-            <Label Text="Click to generate BarCode" FontSize="20" TextColor="black" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold"></Label>
+            <Label Text="Click to generate BarCode" FontSize="20" TextColor="black" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold" Margin="40"></Label>
 
 
             <Button Text="Generate"
                     TextColor="White"
-                     BackgroundColor="Blue"  VerticalOptions="CenterAndExpand"
+                     BackgroundColor="#007acc"  VerticalOptions="CenterAndExpand"
                      HorizontalOptions="CenterAndExpand"
              x:Name="btGerar"/>
 
