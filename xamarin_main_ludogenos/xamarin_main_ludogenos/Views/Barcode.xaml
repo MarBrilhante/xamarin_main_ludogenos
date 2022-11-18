@@ -49,13 +49,15 @@
             <Label Text="Click to generate BarCode" FontSize="20" TextColor="black" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold" Margin="5"></Label>
 
 
-            <Button Text="Generate"
+            <Button Command="{Binding BRCommand}"
+                Text="Generate"
                     TextColor="White"
                      BackgroundColor="#007acc"  VerticalOptions="CenterAndExpand"
                      HorizontalOptions="CenterAndExpand"
-             x:Name="btGerar"/>
+             x:Name="btGerar"
+                    />
 
-            <Button Clicked="testCompleted" x:Name="btnPrint" Text="Print" Command="{Binding BRCommand}"/>
+            
 
 
 

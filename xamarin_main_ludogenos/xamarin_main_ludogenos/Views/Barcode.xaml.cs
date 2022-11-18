@@ -35,6 +35,9 @@ namespace xamarin_main_ludogenos.Models
         {
             string value = etValor.Text;
 
+            Xamarin.Forms.DependencyService.Register<INativePages>();
+            DependencyService.Get<INativePages>().StartActivityInAndroid("BR");
+
             ZXingBarcodeImageView imageView = new ZXingBarcodeImageView();
             imageView.BarcodeFormat = ZXing.BarcodeFormat.EAN_13;
 
@@ -53,10 +56,6 @@ namespace xamarin_main_ludogenos.Models
             }
         }
 
-        private void testCompleted(object sender, EventArgs e)
-        {
-            Xamarin.Forms.DependencyService.Register<INativePages>();
-            DependencyService.Get<INativePages>().StartActivityInAndroid("BR");
-        }
+        
     }
 }
