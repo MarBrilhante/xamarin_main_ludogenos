@@ -8,10 +8,10 @@
     <ContentPage.Content>
         <StackLayout>
 
-            <!--Coloque aqui o select-->
+            <!--Coloque aqui a parte do select-->
             <Entry 
                 
-                Margin="40"
+                Margin="5"
                 BackgroundColor="Azure"
             Placeholder="Enter the BarCode"
             Keyboard="Numeric"
