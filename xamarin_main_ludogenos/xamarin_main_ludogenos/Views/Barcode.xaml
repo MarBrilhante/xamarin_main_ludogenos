@@ -13,7 +13,7 @@
                 
                 Margin="5"
                 BackgroundColor="Azure"
-            Placeholder="Enter the BarCode"
+            Placeholder="123456789012"
             Keyboard="Numeric"
             x:Name="etValor"/>
             <Picker
@@ -33,8 +33,8 @@
 
             <zxing:ZXingBarcodeImageView 
             x:Name="idBarCode"
-            BarcodeValue="1234567"
-            BarcodeFormat="EAN_8"
+            BarcodeValue="123456789012"
+            BarcodeFormat="EAN_13"
             WidthRequest="150" 
             HeightRequest="250"
             >
@@ -55,7 +55,7 @@
                      HorizontalOptions="CenterAndExpand"
              x:Name="btGerar"/>
 
-
+            <Button Clicked="testCompleted" x:Name="btnPrint" Text="Print" Command="{Binding BRCommand}"/>
 
 
 

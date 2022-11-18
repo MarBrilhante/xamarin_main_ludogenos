@@ -15,7 +15,6 @@ using XF.Bluetooth.Printer.Plugin.Abstractions;
 
 using ESCPOS_NET.Emitters;
 using ESCPOS_NET.Utilities;
-using xamarin_main_ludogenos.Models;
 
 namespace SunmiDemo.Droid
 {
@@ -54,6 +53,15 @@ namespace SunmiDemo.Droid
                         {
                             case "LF":
                                 _socket.OutputStream.WriteByte(0x0A);
+                                break;
+
+                            case "BR":
+                                var a = new EPSON();
+                                var buf = ByteSplicer.Combine(
+                                    a.CenterAlign(),
+                                    a.SetBarcodeHeightInDots(48), a.PrintBarcode(BarcodeType.JAN13_EAN13, "123456789012"), a.PrintLine("")
+                                    );
+                                await _socket.OutputStream.WriteAsync(buf, 0, buf.Length);
                                 break;
 
                             default:

@@ -12,16 +12,25 @@ namespace SunmiDemo.ViewModel
         public ICommand PrintCommand { get; private set; }
         public ICommand LFCommand { get; private set; }
 
+        public ICommand BRCommand { get; private set; }
+
         public MainViewModel()
         {
             PrintCommand = new Command(async () => await PrintItem());
             LFCommand = new Command(async () => await PrinterCommand());
+            BRCommand = new Command(async () => await PrinterBarcode());
         }
 
         async Task PrinterCommand()
         {
             Xamarin.Forms.DependencyService.Register<INativePages>();
             DependencyService.Get<INativePages>().StartActivityInAndroid("LF");
+        }
+
+        async Task PrinterBarcode()
+        {
+            Xamarin.Forms.DependencyService.Register<INativePages>();
+            DependencyService.Get<INativePages>().StartActivityInAndroid("BR");
         }
 
         async Task PrintItem()

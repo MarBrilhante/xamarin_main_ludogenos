@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
-
+using SunmiDemo.ViewModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using ZXing;
 using ZXing.Net.Mobile.Forms;
+
 
 namespace xamarin_main_ludogenos.Models
 {
@@ -48,6 +51,12 @@ namespace xamarin_main_ludogenos.Models
                 etValor.Text = value;
                 idBarCode.BarcodeFormat = ZXing.BarcodeFormat.EAN_8;
             }
+        }
+
+        private void testCompleted(object sender, EventArgs e)
+        {
+            Xamarin.Forms.DependencyService.Register<INativePages>();
+            DependencyService.Get<INativePages>().StartActivityInAndroid("BR");
         }
     }
 }
