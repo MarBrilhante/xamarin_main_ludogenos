@@ -7,7 +7,13 @@
              Title="QrCode">
     <ContentPage.Content>
         <StackLayout>
-            
+
+            <StackLayout Margin="0, 0, 0, 50" Orientation="Horizontal" HorizontalOptions="FillAndExpand" Spacing="20">
+                <Entry x:Name="printerNameEntry" HorizontalOptions="Start" IsReadOnly="True" Placeholder="Please select printer.">
+                </Entry>
+                <Button x:Name="selectButton" Text="Select" Clicked="selectPrinterButton_Clicked" VerticalOptions="Center"></Button>
+            </StackLayout>
+
             <Entry 
                 Margin="20"
                 BackgroundColor="Azure"
@@ -35,15 +41,10 @@
 
             <Button Text="Generate"
                     TextColor="White"
-                     BackgroundColor="Blue"  VerticalOptions="CenterAndExpand"
-                     HorizontalOptions="CenterAndExpand"
-                   
-                    x:Name="btGerar"/>
-
-
-
-
-
+                    BackgroundColor="Blue"  VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    x:Name="btGerar"
+                    Clicked="BtGerar_Clicked"/>
 
         </StackLayout>
     </ContentPage.Content>

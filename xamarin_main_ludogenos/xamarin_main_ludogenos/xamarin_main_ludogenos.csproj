@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -26,19 +26,19 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Models\Barcode.xaml">
+    <EmbeddedResource Update="Views\Barcode.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Models\QRCode.xaml">
+    <EmbeddedResource Update="Views\QRCode.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Models\Settings.xaml">
+    <EmbeddedResource Update="Views\Settings.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Models\Test.xaml">
+    <EmbeddedResource Update="Views\Test.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Models\Text.xaml">
+    <EmbeddedResource Update="Views\Text.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

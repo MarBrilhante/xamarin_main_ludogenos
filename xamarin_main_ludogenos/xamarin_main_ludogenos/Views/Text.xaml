@@ -4,6 +4,10 @@
              x:Class="xamarin_main_ludogenos.Models.Text"
              Title="Text printing">
     <ContentPage.Content>
+
+        <ScrollView>
+        
+        
         <StackLayout Orientation="Vertical" BackgroundColor="White">
             <FlexLayout JustifyContent="SpaceBetween" Padding="15, 0 , 10, 5">
                 <Label Text="Text Typeface" TextColor="Black"  FontSize="20"></Label>
@@ -12,6 +16,13 @@
                     <Label Text="Type Monospace" TextColor="Black" FontSize="15"></Label>
                 </StackLayout>
             </FlexLayout>
+
+
+            <StackLayout Margin="0, 0, 0, 50" Orientation="Horizontal" HorizontalOptions="FillAndExpand" Spacing="20">
+                <Entry x:Name="printerNameEntry" HorizontalOptions="Start" IsReadOnly="True" Placeholder="Please select printer.">
+                </Entry>
+                <Button x:Name="selectButton" Text="Select" Clicked="selectPrinterButton_Clicked" VerticalOptions="Center"></Button>
+            </StackLayout>
 
 
             <!--Aqui está o char set -->
@@ -75,14 +86,16 @@
 
             <!--AQUI FICARÁ O TEXTO QUE SERÁ IMPRESSO-->
             <StackLayout Padding="10, 0, 10, 5">
-                <Editor x:Name="Editor" TextColor="Black" BackgroundColor="White" IsSpellCheckEnabled="True" IsTextPredictionEnabled="True" HeightRequest="250"></Editor>
+                <Editor x:Name="Editor_text" TextColor="Black" BackgroundColor="White" IsSpellCheckEnabled="True" IsTextPredictionEnabled="True" HeightRequest="250"></Editor>
             </StackLayout>
 
             <Label Text="Click to print text" FontSize="20" TextColor="Black" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold"></Label>
 
-            <Button Text="Print Out" TextColor="White" BackgroundColor="blue"  VerticalOptions="CenterAndExpand"
+            <Button Clicked="Bt_imprimir_Clicked" x:Name="bt_imprimir" Text="Print Out" TextColor="White" BackgroundColor="blue"  VerticalOptions="CenterAndExpand"
                 HorizontalOptions="CenterAndExpand"
                 Command="{Binding ImprimirCommand}"></Button>
         </StackLayout>
+
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

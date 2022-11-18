@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using BluetoothPrinter;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -38,7 +38,46 @@ namespace xamarin_main_ludogenos.Models
             InitializeComponent();
             CharSetText.Text = "GB18030";
             TextSizeLabel.Text = "24";
-            Editor.Text = WelcomeText;
+            Editor_text.Text = WelcomeText;
+        
+        }
+
+
+        private void Bt_imprimir_Clicked(object sender, EventArgs e)
+        {
+            DependencyService.Get<IBluetoothPrinterService>().PrintText(Editor_text.Text);
+        }
+
+        private async void selectPrinterButton_Clicked(object sender, EventArgs e)
+        {
+            var devices = DependencyService.Get<IBluetoothPrinterService>().GetAvailableDevices();
+            if (devices != null && devices.Count > 0)
+            {
+                var choices = devices.Select(d => d.Title).ToArray();
+                string action = await Application.Current.MainPage.DisplayActionSheet("Select printer device.", "Cancel", null, choices);
+                if (choices.Contains(action))
+                {
+                    SelectDevice(action);
+                }
+            }
+            else
+            {
+                await DisplayAlert("Select Printer", "No device.", "OK");
+            }
+        }
+
+
+        void SelectDevice(string printerName)
+        {
+            if (DependencyService.Get<IBluetoothPrinterService>().SetCurrentDevice(printerName))
+            {
+                var current = DependencyService.Get<IBluetoothPrinterService>().GetCurrentDevice();
+                if (current != null)
+                {
+                    bt_imprimir.Text = current.Title;
+
+                }
+            }
         }
 
         async void OnClickCharSet(object sender, EventArgs e)

@@ -4,9 +4,8 @@
              x:Class="xamarin_main_ludogenos.Models.Test">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Button Clicked="testCompleted" x:Name="btnPrint" Text="Print" Command="{Binding PrintCommand}"/>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
