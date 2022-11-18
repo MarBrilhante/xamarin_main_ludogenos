@@ -7,8 +7,8 @@
              Title="BarCode">
     <ContentPage.Content>
         <StackLayout>
-         
 
+            <!--Coloque aqui o select-->
             <Entry 
                 
                 Margin="40"
