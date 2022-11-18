@@ -17,7 +17,7 @@
             Keyboard="Numeric"
             x:Name="etValor"/>
             <Picker
-                Margin="40"
+                Margin="5"
                 BackgroundColor="Azure"
             x:Name="picker"
             Title="Barcode templates available"
@@ -46,7 +46,7 @@
                 </zxing:ZXingBarcodeImageView.BarcodeOptions>
             </zxing:ZXingBarcodeImageView>
 
-            <Label Text="Click to generate BarCode" FontSize="20" TextColor="black" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold" Margin="40"></Label>
+            <Label Text="Click to generate BarCode" FontSize="20" TextColor="black" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold" Margin="5"></Label>
 
 
             <Button Text="Generate"
